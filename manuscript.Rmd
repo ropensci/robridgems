@@ -1,0 +1,86 @@
+---
+layout: review, 11pt
+linenumbers: true
+title: "R and Python clients for GBIF species occurrence data"
+author:
+  - name: foo bar
+    affiliation: cstar
+    email: stuff(at)ropensci.org
+    footnote: Corresponding author
+address:
+  - code: cstar
+    address: |
+      rOpenSci, Museum of Paleontology, University of California, Berkeley, CA, USA
+abstract: |
+      Corresponding Author:
+
+      foo bar
+
+      rOpenSci, Museum of Paleontology, University of California, Berkeley, CA, USA
+
+      Email address: [stuff@ropensci.org](mailto:stuff@ropensci.org)
+
+      \newpage
+
+      abstract text ...
+
+bibliography: components/references.bib
+csl: components/peerj.csl
+documentclass: components/elsarticle
+
+output:
+  pdf_document:
+    template: components/elsarticle.latex
+    keep_tex: true
+    fig_caption: true
+---
+
+
+```{r compile-settings, include=FALSE}
+library("methods")
+library("knitr")
+opts_chunk$set(
+  tidy = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = 1,
+  comment = '#>',
+  collapse = TRUE,
+  verbose = TRUE
+)
+
+basename <- gsub(".Rmd", "", knitr:::knit_concord$get('infile'))
+opts_chunk$set(fig.path = paste("components/figure/", basename, "-", sep=""),
+               cache.path = paste("components/cache/", basename, "/", sep=""))
+
+# tibble options
+options(tibble.max_extra_cols = 10)
+```
+
+\newpage
+
+# Introduction
+
+intro text ...
+
+# 
+
+
+# Acknowledgments
+
+This project was supported in part by the Alfred P Sloan Foundation
+(Grant No. G-2014-13485), and in part by the Helmsley Foundation
+(Grant No. 2016PG-BRI004).
+
+# References
+
+[mit]: http://choosealicense.com/licenses/mit/
+[ghrgbif]: https://github.com/ropensci/rgbif
+[cranrgbif]: https://cran.rstudio.com/web/packages/rgbif/
+[gbifdocs]: http://www.gbif.org/developer/summary
+[gbifissues]: http://gbif.github.io/gbif-api/apidocs/org/gbif/api/vocabulary/OccurrenceIssue.html
+[taxize]: https://github.com/ropensci/taxize
+[spocc]: https://github.com/ropensci/spocc
+[mapr]: https://github.com/ropensci/mapr
+[ghpygbif]: https://github.com/sckott/pygbif
+[pypipygbif]: https://pypi.python.org/pypi/pygbif

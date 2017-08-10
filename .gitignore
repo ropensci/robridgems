@@ -1,0 +1,9 @@
+papers
+git_deploy.sh
+*.zip
+components/cache
+.Rproj.user
+querloba
+USA*
+cache
+.Rhistory
