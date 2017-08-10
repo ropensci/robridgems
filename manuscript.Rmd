@@ -1,7 +1,7 @@
 ---
 layout: review, 11pt
 linenumbers: true
-title: "R and Python clients for GBIF species occurrence data"
+title: "Bridging between data providers and users: best practices and lessons learned"
 author:
   - name: foo bar
     affiliation: cstar
@@ -63,7 +63,17 @@ options(tibble.max_extra_cols = 10)
 
 intro text ...
 
-# 
+# OUTLINE (from chat btw Carl/Scott)
+
+* use cases necessitate FTP vs. csv dump vs. rest API vs etc.
+* within APIS: what are best practices
+* discoverability - how do you find out if an API has data (taxonomic, geospatial, etc.) you want?
+* data formats: tabular vs. JSON/XML, etc.
+* combining data: e.g., using identifiers instead of names
+* best practices in relational databases, briefly
+* ropensci filling gaps btwn data providers and scientists
+  * communicating from data provdiers to sci.
+  * communicating from sci. to data provdiers
 
 
 # Acknowledgments
@@ -73,14 +83,3 @@ This project was supported in part by the Alfred P Sloan Foundation
 (Grant No. 2016PG-BRI004).
 
 # References
-
-[mit]: http://choosealicense.com/licenses/mit/
-[ghrgbif]: https://github.com/ropensci/rgbif
-[cranrgbif]: https://cran.rstudio.com/web/packages/rgbif/
-[gbifdocs]: http://www.gbif.org/developer/summary
-[gbifissues]: http://gbif.github.io/gbif-api/apidocs/org/gbif/api/vocabulary/OccurrenceIssue.html
-[taxize]: https://github.com/ropensci/taxize
-[spocc]: https://github.com/ropensci/spocc
-[mapr]: https://github.com/ropensci/mapr
-[ghpygbif]: https://github.com/sckott/pygbif
-[pypipygbif]: https://pypi.python.org/pypi/pygbif

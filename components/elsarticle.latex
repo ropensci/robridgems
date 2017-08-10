@@ -18,6 +18,9 @@ $endif$
  \let\@evenfoot\@oddfoot}
 \makeatother
 
+% to avoid tightlist pandoc error
+\def\tightlist{}
+
 % A modified page layout
 \textwidth 6.75in
 \oddsidemargin -0.15in
