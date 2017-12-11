@@ -56,7 +56,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={},
-            pdftitle={Bridging between data providers and users: best practices and lessons learned},
+            pdftitle={Building bridges between data providers and users: best practices and lessons learned},
             colorlinks=true,
             urlcolor=blue,
             linkcolor=magenta,
@@ -75,8 +75,8 @@
 \begin{document}
 \begin{frontmatter}
 
-  \title{Bridging between data providers and users: best practices and lessons
-learned}
+  \title{Building bridges between data providers and users: best practices and
+lessons learned}
     \author[cstar]{foo bar\corref{c1}}
    \ead{stuff(at)ropensci.org} 
    \cortext[c1]{Corresponding author}
@@ -104,12 +104,14 @@ CA, USA}
 
 \newpage
 
-\section{Introduction}\label{introduction}
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
 
 intro text \ldots{}
 
+\hypertarget{outline-from-chat-btw-carlscott}{%
 \section{OUTLINE (from chat btw
-Carl/Scott)}\label{outline-from-chat-btw-carlscott}
+Carl/Scott)}\label{outline-from-chat-btw-carlscott}}
 
 \begin{itemize}
 \tightlist
@@ -128,19 +130,103 @@ Carl/Scott)}\label{outline-from-chat-btw-carlscott}
   best practices in relational databases, briefly
 \item
   ropensci filling gaps btwn data providers and scientists
-\item
-  communicating from data provdiers to sci.
-\item
-  communicating from sci. to data provdiers
+
+  \begin{itemize}
+  \tightlist
+  \item
+    communicating from data provdiers to sci.
+  \item
+    communicating from sci. to data provdiers
+  \end{itemize}
 \end{itemize}
 
-\section{Acknowledgments}\label{acknowledgments}
+\hypertarget{overview-of-the-landscape}{%
+\section{Overview of the landscape}\label{overview-of-the-landscape}}
+
+There is an increasing amount of data available to researchers.
+Leveraging that data efficiently and reproducibly ideally requires
+software. However, researchers have limited time - thus, most rightly
+focus on the science. Furthermore, we want researchers to focus on
+science. Given this, there are a number of issues that others must
+handle:
+
+\begin{itemize}
+\tightlist
+\item
+  We need well made open source software to help researchers leverage
+  data
+\item
+  We need people as bridges between data providers and data users
+  (researchers)
+\item
+  Slack needs to be tacken up to help small scientific databases
+\item
+  We need best practices for working with data
+\end{itemize}
+
+\hypertarget{matching-the-data-format-to-the-use-case}{%
+\section{Matching the data format to the use
+case}\label{matching-the-data-format-to-the-use-case}}
+
+There are innumerable data formats, and there is no one data format that
+is best for every situation. Ideally, one leverages the right data
+format for their use case. The following use cases highlight some of the
+diversity and what data formats they best match.
+
+\begin{itemize}
+\tightlist
+\item
+  Large amount of data: This varies surely, and depends on connection
+  speeds, computers available, etc. - but for sake of argument lets say
+  that \textgreater{} 1 GB is large data for this use case. It doesn't
+  make a lot of sense to provide this through an API, and makes sense to
+  provide as a compressed format. Data of this type makes sense to
+  provide via FTP or similar (Amazon S3, http file server, etc.).
+\item
+  Small amount of data: Probably the majority of data use cases are
+  ``small data''. For example, a spreadsheet with 100 or 100,000 rows is
+  small data. The delivery mechanism can be more flexible with this kind
+  of data. You can definitely serve this data over FTP, but can also
+  simply provide csv/tsv files, and can serve the data over an API.
+\item
+  Data constantly changing: This is a good use case for delivering data
+  via an API. APIs connect to an underlying database that can change as
+  much as the data providers need. However, the API ideally changes only
+  very slowly so that clients can depend on the interface. It's easier
+  to update data incrementally over an API than if there's small changes
+  in lots of files on an FTP server.
+\end{itemize}
+
+\hypertarget{discoverability}{%
+\section{Discoverability}\label{discoverability}}
+
+Discovering what kind of data you can get from a data source before
+actually getting that data is an imporatnt one. For example, say there's
+a database with 1000 GB of data. You don't want to have to download that
+database to your own machine, then search through it to find the data
+you want. Ideally there's a fast way to query a database (perhaps it's
+metadata) before delving into the data fetching process that will likely
+take longer.
+
+Unfortunately, most datasets are very lacking in metadata. However, when
+metadata is well filled out, it makes data discovery much easier. For
+example, \ldots{}
+
+Suggestions?: do x. y, and z
+
+\hypertarget{bridges-between-data-providers-and-users}{%
+\section{Bridges between data providers and
+users}\label{bridges-between-data-providers-and-users}}
+
+\hypertarget{acknowledgments}{%
+\section{Acknowledgments}\label{acknowledgments}}
 
 This project was supported in part by the Alfred P Sloan Foundation
-(Grant No. G-2014-13485), and in part by the Helmsley Foundation (Grant
-No. 2016PG-BRI004).
+(Grant No.~G-2014-13485), and in part by the Helmsley Foundation (Grant
+No.~2016PG-BRI004).
 
-\section{References}\label{references}
+\hypertarget{references}{%
+\section{References}\label{references}}
 
 \end{document}
 
