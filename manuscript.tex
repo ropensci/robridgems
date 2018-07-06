@@ -116,7 +116,7 @@ Carl/Scott)}\label{outline-from-chat-btw-carlscott}}
 \begin{itemize}
 \tightlist
 \item
-  use cases necessitate FTP vs.~csv dump vs.~rest API vs etc.
+  use cases that necessitate FTP vs.~csv dump vs.~rest API vs etc.
 \item
   within APIS: what are best practices
 \item
@@ -162,6 +162,26 @@ handle:
   Slack needs to be tacken up to help small scientific databases
 \item
   We need best practices for working with data
+\end{itemize}
+
+\hypertarget{data-formats}{%
+\section{Data formats}\label{data-formats}}
+
+Data formats are incredibly diverse. In addition, there's many that are
+used more often in scientific use cases than elsewhere (e.g.~NetCDF).
+Data formats lead to many problems, often in some only working on some
+platforms, and in translating between data formats.
+
+\begin{itemize}
+\tightlist
+\item
+  Tabular (csv/tsv)
+\item
+  JSON
+\item
+  XML
+\item
+  PDF
 \end{itemize}
 
 \hypertarget{matching-the-data-format-to-the-use-case}{%
@@ -218,11 +238,25 @@ Suggestions?: do x. y, and z
 \section{Bridges between data providers and
 users}\label{bridges-between-data-providers-and-users}}
 
+Data providers - sysadmin's, software engineers, data curators,
+publishers, domain experts, and more - are keenly focused on providing a
+great product for researchers and the public. Data providers in the
+scientific space are not usually very profitable. Thus, time is very
+limited. In addition, the very technical bent of the data providers may
+not be the best fit for researchers that don't understand the same
+terminology, etc.
+
+This leaves space for bridges to be built between data providers and
+researechers - ideally people that understand both data providers and
+researchers and can speak both languages. rOpenSci has been doing this
+for a number of communities.
+
+xxxx
+
 \hypertarget{acknowledgments}{%
 \section{Acknowledgments}\label{acknowledgments}}
 
-This project was supported in part by the Alfred P Sloan Foundation
-(Grant No.~G-2014-13485), and in part by the Helmsley Foundation (Grant
+This project was supported by the Helmsley Foundation (Grant
 No.~2016PG-BRI004).
 
 \hypertarget{references}{%

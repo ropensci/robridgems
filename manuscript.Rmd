@@ -65,7 +65,7 @@ intro text ...
 
 # OUTLINE (from chat btw Carl/Scott)
 
-* use cases necessitate FTP vs. csv dump vs. rest API vs etc.
+* use cases that necessitate FTP vs. csv dump vs. rest API vs etc.
 * within APIS: what are best practices
 * discoverability - how do you find out if an API has data (taxonomic, geospatial, etc.) you want?
 * data formats: tabular vs. JSON/XML, etc.
@@ -120,8 +120,6 @@ xxxx
 
 # Acknowledgments
 
-This project was supported in part by the Alfred P Sloan Foundation
-(Grant No. G-2014-13485), and in part by the Helmsley Foundation
-(Grant No. 2016PG-BRI004).
+This project was supported by the Helmsley Foundation (Grant No. 2016PG-BRI004).
 
 # References
